@@ -7,6 +7,20 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/*
+    Casos de prueba
+    fibonacci -1 -> IllegalArgumentException
+    fibonacci 0 -> 0
+    fibonacci 1 -> 1
+    fibonacci 2 -> 1
+    fibonacci 3 -> 2
+    fibonacci 4 -> 3
+
+    Caso general
+    fibonacci n -> fibonacci n - 1 + fibonacci n - 2
+
+ */
+
 class FibonacciTest {
 
     private Fibonacci fibonacci;
@@ -27,8 +41,13 @@ class FibonacciTest {
     }
 
     @Test
-    public void shouldReturnZeroForFibonacciOfOne(){
-        assertEquals(0,fibonacci.compute(1));
+    public void shouldReturnOneForFibonacciOfOne(){
+        assertEquals(1,fibonacci.compute(1));
+    }
+
+    @Test
+    public void shouldReturnOneForFibonacciOfTwo(){
+        assertEquals(1,fibonacci.compute(2));
     }
 
 }
