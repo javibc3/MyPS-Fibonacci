@@ -50,4 +50,11 @@ class FibonacciTest {
         assertEquals(1,fibonacci.compute(2));
     }
 
+    @Test
+    public void shouldThrowIllegalArgumentExceptionForFibonacciOfNegative(){
+        assertThrows(IllegalArgumentException.class,()->{
+            fibonacci.compute(-1);
+        });
+    }
+
 }
