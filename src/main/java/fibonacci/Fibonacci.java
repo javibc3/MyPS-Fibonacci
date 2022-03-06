@@ -3,16 +3,19 @@ package fibonacci;
 
 public class Fibonacci {
 
-    public int compute(int i) {
-        if(i < 0) {
+    public int compute(int n) {
+        if(n < 0) {
             throw new IllegalArgumentException("Cannot compute fibonacci of a negative number");
         }
-        else if(i == 1 || i == 2){
-            return 1;
+        int result = 0;
+        int b = 1;
+        int c;
+        for(int i = 0 ; i < n; i++){
+            c = result + b;
+            result = b;
+            b = c;
         }
-        else{
-            return 0;
-        }
+        return result;
     }
 
 }
