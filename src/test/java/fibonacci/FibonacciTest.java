@@ -56,6 +56,11 @@ class FibonacciTest {
     }
 
     @Test
+    public void shouldReturnThreeForFibonacciOfFour(){
+        assertEquals(3,fibonacci.compute(4));
+    }
+
+    @Test
     public void shouldThrowIllegalArgumentExceptionForFibonacciOfNegative(){
         assertThrows(IllegalArgumentException.class,()->{
             fibonacci.compute(-1);
